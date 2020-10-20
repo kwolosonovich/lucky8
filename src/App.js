@@ -9,7 +9,7 @@ function App() {
       <header className="App-header">
         <h1>Lucky Eight</h1>
       </header>
-      <EightBall answers={Answers} />
+      <EightBall />
     </div>
   );
 }
