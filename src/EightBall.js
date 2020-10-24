@@ -19,11 +19,16 @@ let EightBall = () => {
 
     return (
       <section className="stage">
-        <figure className="ball" style={ { backgroundColor: color }}>
+        <figure
+          className="ball"
+          style={{ backgroundColor: color }}
+        >
           <span className="shadow"></span>
           <span className="text">
             <h1 style={{ color: color }}>{msg}</h1>
-            <button onClick={() => shake()}>Shake</button>
+            <button onClick={() => shake()}>
+              Shake
+            </button>
           </span>
         </figure>
       </section>
