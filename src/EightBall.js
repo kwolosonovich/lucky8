@@ -1,25 +1,29 @@
+import { set } from 'lodash';
 import React, {useState} from 'react';
 import Answers from "./Answers";
 import './EightBall.css'
 import GetRandom from './GetRandom'
 
 
-let EightBall = (props) => {
+let EightBall = () => {
 
   const [msg, setMsg] = useState("Think of a Question.");
+  const [color, setColor] = useState("black");
+
 
   let shake = () => {
-    const { msg } = GetRandom(Answers);
+    const { msg, color } = GetRandom(Answers);
     setMsg(msg)
+    setColor(color)
   };
 
     return (
       <section className="stage">
-        <figure className="ball">
+        <figure className="ball" style={ { backgroundColor: color }}>
           <span className="shadow"></span>
           <span className="text">
-              <h1>{msg}</h1> 
-              <button onClick={() => shake()}>Shake</button>
+            <h1 style={{ color: color }}>{msg}</h1>
+            <button onClick={() => shake()}>Shake</button>
           </span>
         </figure>
       </section>

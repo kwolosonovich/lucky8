@@ -5,7 +5,6 @@
   margin: 0;
   border-radius: 50%;
   position: relative;
-  background: radial-gradient(circle at 50% 120%, #323232, #0a0a0a 80%, #000000 100%);
 }
 .ball:before {
   position: absolute;
